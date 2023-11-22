@@ -1,0 +1,151 @@
+[gd_scene load_steps=20 format=3 uid="uid://co8sod2ktt5r6"]
+
+[ext_resource type="Texture2D" uid="uid://cf2kmv35e7gud" path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_oic43"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_np8sc"]
+radius = 6.0
+height = 14.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2e0t"]
+atlas = ExtResource("1_oic43")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elo0n"]
+atlas = ExtResource("1_oic43")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqdcl"]
+atlas = ExtResource("1_oic43")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58ksy"]
+atlas = ExtResource("1_oic43")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cng80"]
+atlas = ExtResource("1_oic43")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbkhf"]
+atlas = ExtResource("1_oic43")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ac7y"]
+atlas = ExtResource("1_oic43")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fj7e"]
+atlas = ExtResource("1_oic43")
+region = Rect2(144, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slm10"]
+atlas = ExtResource("1_oic43")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j60rk"]
+atlas = ExtResource("1_oic43")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqfuu"]
+atlas = ExtResource("1_oic43")
+region = Rect2(96, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdn7q"]
+atlas = ExtResource("1_oic43")
+region = Rect2(144, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qwt7"]
+atlas = ExtResource("1_oic43")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78t14"]
+atlas = ExtResource("1_oic43")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4igck"]
+atlas = ExtResource("1_oic43")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kc0j"]
+atlas = ExtResource("1_oic43")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_68u50"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2e0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elo0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqdcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58ksy")
+}],
+"loop": true,
+"name": &"Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cng80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbkhf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ac7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fj7e")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slm10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j60rk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqfuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdn7q")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qwt7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78t14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4igck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kc0j")
+}],
+"loop": true,
+"name": &"Up",
+"speed": 5.0
+}]
+
+[node name="Lallu" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_np8sc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_68u50")
+animation = &"Up"
