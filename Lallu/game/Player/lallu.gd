@@ -1,51 +1,31 @@
-extends Area2D
+extends CharacterBody2D
 
-signal hit
-@export var speed = 400
-var screen_size
 @onready var anim = $AnimatedSprite2D
+var speed = 350
 
-func _ready():
-	screen_size = get_viewport_rect().size
-
-func _process(delta):
-	var velocity = Vector2.ZERO # The player's movement vector.
-	if Input.is_action_pressed("right"):
-		velocity.x += 1
+func _physics_process(delta):
+	var input_dir = Vector2.ZERO
 	if Input.is_action_pressed("left"):
-		velocity.x -= 1
-	if Input.is_action_pressed("down"):
-		velocity.y += 1
+		input_dir.x -= 1
+	if Input.is_action_pressed("right"):
+		input_dir.x += 1
 	if Input.is_action_pressed("up"):
-		velocity.y -= 1
+		input_dir.y -= 1
+	if Input.is_action_pressed("down"):
+		input_dir.y += 1
 
-
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
-		anim.play()
-	else:
+	velocity = input_dir.normalized() * speed
+	
+	if velocity.x == 0 && velocity.y == 0:
 		anim.stop()
-	
-	position += velocity * delta
-	position.x = clamp(position.x, 26, screen_size.x - 26)
-	position.y = clamp(position.y, 30, screen_size.y - 30)
-	
 	if velocity.x != 0 && velocity.x > 0:
-		anim.animation = "right"
+		anim.play("right")
 		# See the note below about boolean assignment.
 	elif velocity.x != 0 && velocity.x < 0:
-		anim.animation = "left"
+		anim.play("left")
 	elif velocity.y != 0 && velocity.y > 0:
-		anim.animation = "down"
+		anim.play("down")
 	elif velocity.y != 0 && velocity.y < 0:
-		anim.animation = "up"
-
-
-func _on_body_entered(body):
-	hit.emit()
-	$CollisionShape2D.set_deferred("disabled", true)
-
-#func start(pos):
-#	position = pos
-#	show()
-#	$CollisionShape2D.disabled = false
+		anim.play("up")
+		
+	move_and_collide(velocity * delta)
