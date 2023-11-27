@@ -3,7 +3,7 @@ extends Area2D
 signal hit
 @export var speed = 400
 var screen_size
-@onready var anim = get_node("$AnimatedSprite2D")
+@onready var anim = $AnimatedSprite2D
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -22,24 +22,30 @@ func _process(delta):
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		$AnimatedSprite2D.play()
+		anim.play()
 	else:
-		$AnimatedSprite2D.stop()
+		anim.stop()
 	
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
-
+	position.x = clamp(position.x, 26, screen_size.x - 26)
+	position.y = clamp(position.y, 30, screen_size.y - 30)
+	
 	if velocity.x != 0 && velocity.x > 0:
-		$AnimatedSprite2D.animation = "right"
+		anim.animation = "right"
 		# See the note below about boolean assignment.
 	elif velocity.x != 0 && velocity.x < 0:
-		$AnimatedSprite2D.animation = "left"
+		anim.animation = "left"
 	elif velocity.y != 0 && velocity.y > 0:
-		$AnimatedSprite2D.animation = "down"
+		anim.animation = "down"
 	elif velocity.y != 0 && velocity.y < 0:
-		$AnimatedSprite2D.animation = "up"
+		anim.animation = "up"
 
 
 func _on_body_entered(body):
 	hit.emit()
 	$CollisionShape2D.set_deferred("disabled", true)
+
+#func start(pos):
+#	position = pos
+#	show()
+#	$CollisionShape2D.disabled = false
