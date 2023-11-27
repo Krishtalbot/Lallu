@@ -38,3 +38,7 @@ func _physics_process(delta):
 		anim.play("up")
 		
 	move_and_collide(velocity * delta)
+
+func _on_collision_detector_area_entered(area):
+	if area.is_in_group("egg"):
+		print("egg")

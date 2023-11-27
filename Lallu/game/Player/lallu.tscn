@@ -156,7 +156,9 @@ shape = SubResource("CapsuleShape2D_tiu3e")
 sprite_frames = SubResource("SpriteFrames_3lcio")
 animation = &"down"
 
-[node name="collision_detector" type="Area2D" parent="."]
+[node name="collision_detector" type="Area2D" parent="." groups=["lallu"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="collision_detector"]
 shape = SubResource("CapsuleShape2D_338hk")
+
+[connection signal="area_entered" from="collision_detector" to="." method="_on_collision_detector_area_entered"]

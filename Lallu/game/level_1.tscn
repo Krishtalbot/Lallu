@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm2lbknqpbfc5"]
+[gd_scene load_steps=6 format=3 uid="uid://cm2lbknqpbfc5"]
 
 [ext_resource type="Texture2D" uid="uid://07oirtqsey4h" path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_xu0eu"]
 [ext_resource type="PackedScene" uid="uid://icnmy38m21bg" path="res://Player/lallu.tscn" id="2_x3oev"]
+[ext_resource type="PackedScene" uid="uid://d8ag5d0jx6dj" path="res://Egg/egg.tscn" id="3_5l7es"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_36mhi"]
 texture = ExtResource("1_xu0eu")
@@ -90,3 +91,9 @@ layer_0/tile_data = PackedInt32Array(65538, 0, 0, 131074, 0, 0, 196610, 0, 0, 26
 [node name="Lallu" parent="." instance=ExtResource("2_x3oev")]
 position = Vector2(252, 355)
 scale = Vector2(5.08, 5.08)
+
+[node name="Egg" parent="." instance=ExtResource("3_5l7es")]
+position = Vector2(764, 113)
+scale = Vector2(2.95383, 2.95383)
+collision_layer = 0
+collision_mask = 0
