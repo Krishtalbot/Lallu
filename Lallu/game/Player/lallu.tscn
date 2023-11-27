@@ -154,7 +154,7 @@ shape = SubResource("CapsuleShape2D_tiu3e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3lcio")
-animation = &"left"
+animation = &"down"
 
 [node name="collision_detector" type="Area2D" parent="."]
 

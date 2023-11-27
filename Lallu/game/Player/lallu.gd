@@ -1,7 +1,16 @@
 extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
-var speed = 350
+var speed = 200
+var screen_size
+
+func _ready():
+	screen_size = get_viewport_rect().size
+
+func _process(delta):
+	position += velocity * delta
+	position.x = clamp(position.x, 26, screen_size.x - 26)
+	position.y = clamp(position.y, 30, screen_size.y - 30)
 
 func _physics_process(delta):
 	var input_dir = Vector2.ZERO
