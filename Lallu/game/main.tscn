@@ -6,10 +6,18 @@
 script = ExtResource("1_4ioqb")
 
 [node name="Start" type="Button" parent="."]
-offset_left = 339.0
-offset_top = 196.0
-offset_right = 704.0
-offset_bottom = 360.0
+offset_left = 360.0
+offset_top = 340.0
+offset_right = 642.0
+offset_bottom = 378.0
 text = "Start"
 
+[node name="Scene 2" type="Button" parent="."]
+offset_left = 359.0
+offset_top = 399.0
+offset_right = 641.0
+offset_bottom = 442.0
+text = "Scene 2"
+
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Scene 2" to="." method="_on_scene_2_pressed"]
