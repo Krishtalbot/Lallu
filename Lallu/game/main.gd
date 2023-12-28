@@ -11,9 +11,13 @@ func _process(delta):
 	pass
 
 
-func _on_start_pressed():
-	get_tree().change_scene_to_file("res://level_1.tscn")
+func _on_scene_1_pressed():
+	get_tree().change_scene_to_file("res://Scene_1/Level_1.tscn")
 
 
 func _on_scene_2_pressed():
 	get_tree().change_scene_to_file("res://Scene_2/Scene_2.tscn")
+
+
+func _on_scene_3_pressed():
+	get_tree().change_scene_to_file("res://Scene_3/Level_3.tscn")
