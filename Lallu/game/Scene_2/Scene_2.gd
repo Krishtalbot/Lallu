@@ -25,3 +25,11 @@ func _on_egg_body_exited(body):
 
 func _on_area_2d_body_entered(CharacterBody2D):
 	$openMap/vortex/Vortex.visible = true
+
+
+func _on_finish_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	get_tree().change_scene_to_file("res://Scene_2/Scene_2.tscn")
+
+
+func _on_vortex_body_exited(body):
+	$openMap/vortex/Vortex.visible = false
