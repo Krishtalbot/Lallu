@@ -26,7 +26,7 @@ layer_1/tile_data = PackedInt32Array(0, 65536, 0, 65536, 0, 1, 131072, 0, 1, 196
 position = Vector2(560, 304)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="open_map/finish"]
-scale = Vector2(0.411, 0.411)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_x75ia")
 
 [node name="vortex" type="Area2D" parent="open_map"]
@@ -38,7 +38,7 @@ scale = Vector2(0.084, 0.084)
 texture = ExtResource("5_7esc6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="open_map/vortex"]
-scale = Vector2(4.021, 4.021)
+scale = Vector2(4.5, 4.5)
 shape = SubResource("CircleShape2D_x75ia")
 
 [node name="Camera2D" type="Camera2D" parent="."]
