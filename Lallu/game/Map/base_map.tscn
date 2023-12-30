@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bm2ewntdv41g2"]
+[gd_scene load_steps=14 format=3 uid="uid://bm2ewntdv41g2"]
 
 [ext_resource type="Texture2D" uid="uid://comgax554f60t" path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png" id="1_m5ltt"]
 [ext_resource type="Texture2D" uid="uid://07oirtqsey4h" path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="2_jodg0"]
 [ext_resource type="Texture2D" uid="uid://ir5x12heqejf" path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Hills.png" id="3_r2b5h"]
 [ext_resource type="Texture2D" uid="uid://bphmnylqbscct" path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Tilled Dirt.png" id="4_swoen"]
 [ext_resource type="Texture2D" uid="uid://bdcsig2do8d2p" path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="5_onl8x"]
+[ext_resource type="Texture2D" uid="uid://ctrd3i1ty7g4i" path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="6_6spa4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7cha"]
 texture = ExtResource("1_m5ltt")
@@ -690,6 +691,21 @@ texture = ExtResource("5_onl8x")
 6:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:4/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4h4k"]
+texture = ExtResource("6_6spa4")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSet" id="TileSet_fiaev"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_a7cha")
@@ -697,6 +713,7 @@ sources/1 = SubResource("TileSetAtlasSource_oe081")
 sources/2 = SubResource("TileSetAtlasSource_jmb7e")
 sources/3 = SubResource("TileSetAtlasSource_dvalv")
 sources/4 = SubResource("TileSetAtlasSource_2i81f")
+sources/5 = SubResource("TileSetAtlasSource_q4h4k")
 
 [node name="base_map" type="TileMap"]
 tile_set = SubResource("TileSet_fiaev")
