@@ -28,23 +28,23 @@ func _on_finish_body_entered(body):
 	get_tree().change_scene_to_file("res://Finish/finish.tscn")
 
 func _on_bomb_body_entered(body):
-	get_tree().change_scene_to_file("res://Finish/over.tscn")
+	get_tree().change_scene_to_file("res://Scene_1/Level_1.tscn")
 
 
 func _on_bomb_2_body_entered(body):
-	get_tree().change_scene_to_file("res://Finish/over.tscn")
+	get_tree().change_scene_to_file("res://Scene_1/Level_1.tscn")
 
 
 func _on_bomb_3_body_entered(body):
-	get_tree().change_scene_to_file("res://Finish/over.tscn")
+	get_tree().change_scene_to_file("res://Scene_1/Level_1.tscn")
 
 
 func _on_bomb_4_body_entered(body):
-	get_tree().change_scene_to_file("res://Finish/over.tscn")
+	get_tree().change_scene_to_file("res://Scene_1/Level_1.tscn")
 
 
 func _on_bomb_5_body_entered(body):
-	get_tree().change_scene_to_file("res://Finish/over.tscn")
+	get_tree().change_scene_to_file("res://Scene_1/Level_1.tscn")
 
 
 
