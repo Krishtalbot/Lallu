@@ -38,3 +38,4 @@ position = Vector2(1663, 416)
 
 [node name="Sync" type="Node" parent="."]
 script = ExtResource("2_cocca")
+action_repeat = 4
