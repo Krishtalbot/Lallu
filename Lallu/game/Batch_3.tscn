@@ -38,4 +38,3 @@ position = Vector2(1663, 416)
 
 [node name="Sync" type="Node" parent="."]
 script = ExtResource("2_cocca")
-speed_up = 16
