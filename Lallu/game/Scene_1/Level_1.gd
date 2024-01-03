@@ -15,7 +15,8 @@ func _process(delta):
 func _on_egg_body_entered(body):
 	$open_map.visible = true
 	$close_map.visible = false
-
+	$close_map.queue_free()
+	
 func _on_vortex_body_entered(body):
 	$open_map/vortex/Vortex.visible = true
 

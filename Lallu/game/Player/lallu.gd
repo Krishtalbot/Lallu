@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
-var speed = 500
+var speed = 40
 var screen_size
 
 func _ready():

@@ -2,6 +2,7 @@ extends Node2D
 var status = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var pos = $Lallu.get_position_delta()
 	$open_map.visible = false
 	$close_map.visible = true
 	$open_map/vortex/vortex_sprite.visible = false
@@ -25,27 +26,31 @@ func _on_vortex_body_exited(body):
 
 
 func _on_finish_body_entered(body):
-	get_tree().change_scene_to_file("res://Finish/finish.tscn")
+	#get_tree().change_scene_to_file("res://Finish/finish.tscn")
+	pass
 
 func _on_bomb_body_entered(body):
-	get_tree().change_scene_to_file("res://Finish/over.tscn")
+	#get_tree().change_scene_to_file("res://Finish/over.tscn")
+	pass
 
 
 func _on_bomb_2_body_entered(body):
-	get_tree().change_scene_to_file("res://Finish/over.tscn")
+	#get_tree().change_scene_to_file("res://Finish/over.tscn")
+	pass
 
 
 func _on_bomb_3_body_entered(body):
-	get_tree().change_scene_to_file("res://Finish/over.tscn")
+	#get_tree().change_scene_to_file("res://Finish/over.tscn")
+	pass
 
 
 func _on_bomb_4_body_entered(body):
-	get_tree().change_scene_to_file("res://Finish/over.tscn")
+	#get_tree().change_scene_to_file("res://Finish/over.tscn")
+	pass
 
 
 func _on_bomb_5_body_entered(body):
-	get_tree().change_scene_to_file("res://Finish/over.tscn")
-
-
+	#get_tree().change_scene_to_file("res://Finish/over.tscn")
+	pass
 
 

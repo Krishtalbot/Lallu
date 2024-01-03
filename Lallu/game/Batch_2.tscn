@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://dktmwgy8545lt"]
+
+[ext_resource type="PackedScene" uid="uid://doysunfi6oetq" path="res://Scene_2/Level_2.tscn" id="1_hp8la"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="2_3tsgt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Level2" parent="." instance=ExtResource("1_hp8la")]
+
+[node name="Level3" parent="." instance=ExtResource("1_hp8la")]
+
+[node name="Level4" parent="." instance=ExtResource("1_hp8la")]
+
+[node name="Level5" parent="." instance=ExtResource("1_hp8la")]
+
+[node name="Level6" parent="." instance=ExtResource("1_hp8la")]
+
+[node name="Level7" parent="." instance=ExtResource("1_hp8la")]
+
+[node name="Level8" parent="." instance=ExtResource("1_hp8la")]
+
+[node name="Level9" parent="." instance=ExtResource("1_hp8la")]
+
+[node name="Level10" parent="." instance=ExtResource("1_hp8la")]
+
+[node name="Level11" parent="." instance=ExtResource("1_hp8la")]
+
+[node name="Level12" parent="." instance=ExtResource("1_hp8la")]
+
+[node name="Level13" parent="." instance=ExtResource("1_hp8la")]
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("2_3tsgt")

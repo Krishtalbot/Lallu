@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://75pya6pxsnrd"]
+
+[ext_resource type="PackedScene" uid="uid://cv6vihdg3j6c6" path="res://Scene_3/Level_3.tscn" id="1_1j2r3"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="2_cocca"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2(1078, 189)
+zoom = Vector2(0.405, 0.405)
+
+[node name="Level3" parent="." instance=ExtResource("1_1j2r3")]
+position = Vector2(-2, 4)
+
+[node name="Level4" parent="." instance=ExtResource("1_1j2r3")]
+position = Vector2(-1, -412)
+
+[node name="Level5" parent="." instance=ExtResource("1_1j2r3")]
+position = Vector2(-2, 420)
+
+[node name="Level6" parent="." instance=ExtResource("1_1j2r3")]
+position = Vector2(827, 0)
+
+[node name="Level7" parent="." instance=ExtResource("1_1j2r3")]
+position = Vector2(828, -416)
+
+[node name="Level8" parent="." instance=ExtResource("1_1j2r3")]
+position = Vector2(827, 416)
+
+[node name="Level9" parent="." instance=ExtResource("1_1j2r3")]
+position = Vector2(1663, 0)
+
+[node name="Level10" parent="." instance=ExtResource("1_1j2r3")]
+position = Vector2(1664, -416)
+
+[node name="Level11" parent="." instance=ExtResource("1_1j2r3")]
+position = Vector2(1663, 416)
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("2_cocca")
+speed_up = 16

@@ -49,8 +49,7 @@ func _on_collision_detector_area_entered(area):
 
 
 func _on_egg_body_entered(_body: Node2D) -> void:
-	position = Vector2(345, 195)
-	ai_controller_1.reward += 1.0
+	ai_controller_1.reward += 0.5
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	position = Vector2(345,195)
@@ -61,7 +60,8 @@ func _on_area_2d_body_exited(_body: Node2D) -> void:
 
 
 func _on_finish_body_entered(_body: Node2D) -> void:
-	ai_controller_1.reward += 0.5
+	position = Vector2(345,195)
+	ai_controller_1.reward += 1.0
 
 
 

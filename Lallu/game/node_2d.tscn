@@ -5,6 +5,10 @@
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1153, -205)
+zoom = Vector2(0.41, 0.41)
+
 [node name="Level1" parent="." instance=ExtResource("1_seypf")]
 
 [node name="Level2" parent="." instance=ExtResource("1_seypf")]
@@ -34,7 +38,3 @@ position = Vector2(1729, -424)
 [node name="Sync" type="Node" parent="."]
 script = ExtResource("2_iied8")
 speed_up = 16
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1133, -249)
-zoom = Vector2(0.41, 0.41)

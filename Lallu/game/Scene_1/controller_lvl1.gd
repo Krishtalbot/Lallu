@@ -1,5 +1,7 @@
 extends AIController2D
+
 var move = Vector2.ZERO
+
 @onready var lallu = $".."
 @onready var finish = $"../../open_map/finish"
 

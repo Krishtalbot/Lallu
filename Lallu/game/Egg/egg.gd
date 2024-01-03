@@ -12,5 +12,6 @@ func _process(delta):
 
 func _on_body_entered(body):
 	queue_free()
+	visible = false
 	has_egg = true
 	print("Detected")
