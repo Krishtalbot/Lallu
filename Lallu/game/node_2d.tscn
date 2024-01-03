@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://16722uoe2m30"]
+
+[ext_resource type="PackedScene" uid="uid://bjkfknvmwe0eo" path="res://Scene_1/Level_1.tscn" id="1_seypf"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="2_iied8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Level1" parent="." instance=ExtResource("1_seypf")]
+
+[node name="Level2" parent="." instance=ExtResource("1_seypf")]
+position = Vector2(0, -855)
+
+[node name="Level3" parent="." instance=ExtResource("1_seypf")]
+position = Vector2(4, -428)
+
+[node name="Level4" parent="." instance=ExtResource("1_seypf")]
+position = Vector2(866, 0)
+
+[node name="Level5" parent="." instance=ExtResource("1_seypf")]
+position = Vector2(866, -855)
+
+[node name="Level6" parent="." instance=ExtResource("1_seypf")]
+position = Vector2(870, -428)
+
+[node name="Level7" parent="." instance=ExtResource("1_seypf")]
+position = Vector2(1725, 4)
+
+[node name="Level8" parent="." instance=ExtResource("1_seypf")]
+position = Vector2(1725, -851)
+
+[node name="Level9" parent="." instance=ExtResource("1_seypf")]
+position = Vector2(1729, -424)
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("2_iied8")
+speed_up = 16
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1133, -249)
+zoom = Vector2(0.41, 0.41)
