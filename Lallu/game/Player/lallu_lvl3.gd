@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
 @onready var lallu = $"."
 
-var speed = 20
+var speed = 40
 var screen_size
 
 func _ready():
@@ -48,41 +48,41 @@ func _on_collision_detector_area_entered(area):
 		print("egg")
 		
 		
-func _on_egg_body_entered(body):
+func _on_egg_body_entered(_body):
 	ai_controller_3.reward += 0.75
 
 
-func _on_bomb_body_entered(body):
+func _on_bomb_body_entered(_body):
 	ai_controller_3.reward -= 1.0
 	position = Vector2(255, 200)
 	
 
 
-func _on_bomb_2_body_entered(body):
+func _on_bomb_2_body_entered(_body):
 	ai_controller_3.reward -= 1.0
 	position = Vector2(255, 200)
 	
 
 
-func _on_bomb_3_body_entered(body):
+func _on_bomb_3_body_entered(_body):
 	ai_controller_3.reward -= 1.0
 	position = Vector2(255, 200)
 
 
 
-func _on_bomb_4_body_entered(body):
-	ai_controller_3.reward -= 1.0
-	position = Vector2(255, 200)
-	
-
-
-func _on_bomb_5_body_entered(body):
+func _on_bomb_4_body_entered(_body):
 	ai_controller_3.reward -= 1.0
 	position = Vector2(255, 200)
 	
 
 
-func _on_finish_body_entered(body):
+func _on_bomb_5_body_entered(_body):
+	ai_controller_3.reward -= 1.0
+	position = Vector2(255, 200)
+	
+
+
+func _on_finish_body_entered(_body):
 	ai_controller_3.reward += 1.0
 	position = Vector2(255, 200)
 	
@@ -94,6 +94,10 @@ func _on_area_2d_body_entered(_body):
 	
 
 
-func _on_area_2d_body_exited(body):
+func _on_area_2d_body_exited(_body):
 	ai_controller_3.reward += 0
 	
+
+
+func _on_vortex_body_entered(_body):
+	ai_controller_3.reward += 0.5

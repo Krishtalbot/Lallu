@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjkfknvmwe0eo"]
+[gd_scene load_steps=10 format=3 uid="uid://bjkfknvmwe0eo"]
 
 [ext_resource type="Script" path="res://Scene_1/Level_1.gd" id="1_4vq4c"]
 [ext_resource type="PackedScene" uid="uid://icnmy38m21bg" path="res://Player/lallu.tscn" id="2_xdbrk"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bm2ewntdv41g2" path="res://Map/base_map.tscn" id="4_0arvl"]
 [ext_resource type="Script" path="res://Scene_1/controller_lvl1.gd" id="4_4q0y0"]
 [ext_resource type="Texture2D" uid="uid://cwhhh83msggvj" path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Vortex/vortex.png" id="5_7esc6"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="8_6y4et"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x75ia"]
 
@@ -25,7 +26,7 @@ position = Vector2(270, 182)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 build_mode = 1
-polygon = PackedVector2Array(0, -37, 244, -38, 243, -25, 257, -25, 259, -55, -14, -55, -14, 76, 259, 76, 259, 42, 244, 42, 245, 58, 0, 57)
+polygon = PackedVector2Array(0, -37, 244, -38, 243, -25, 320, -26, 319, -36, 259, -36, 259, -55, -14, -55, -14, 76, 259, 76, 259, 57, 320, 56, 320, 42, 320, -25, 309, -26, 309, 42, 244, 42, 245, 58, 0, 57)
 
 [node name="Egg" parent="." instance=ExtResource("3_7jy0p")]
 position = Vector2(403, 193)
@@ -61,6 +62,10 @@ shape = SubResource("CircleShape2D_x75ia")
 position = Vector2(418, 195)
 zoom = Vector2(2.815, 2.815)
 
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("8_6y4et")
+onnx_model_path = "model_lvl1.onnx"
+
 [connection signal="body_entered" from="Area2D" to="Lallu" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Lallu" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Egg" to="." method="_on_egg_body_entered"]
@@ -69,4 +74,5 @@ zoom = Vector2(2.815, 2.815)
 [connection signal="body_entered" from="open_map/finish" to="." method="_on_finish_body_entered"]
 [connection signal="body_entered" from="open_map/finish" to="Lallu" method="_on_finish_body_entered"]
 [connection signal="body_entered" from="open_map/vortex" to="." method="_on_vortex_body_entered"]
+[connection signal="body_entered" from="open_map/vortex" to="Lallu" method="_on_vortex_body_entered"]
 [connection signal="body_exited" from="open_map/vortex" to="." method="_on_vortex_body_exited"]

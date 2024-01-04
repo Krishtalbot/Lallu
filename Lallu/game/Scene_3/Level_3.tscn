@@ -118,7 +118,7 @@ shape = SubResource("CircleShape2D_wans5")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(13, 351, 225, 351, 225, 302, 239, 302, 239, 349, 369, 349, 514, 349, 514, 335, 528, 335, 528, 367, 0, 367, 0, -1, 528, -1, 529, 269, 468, 269, 468, 255, 514, 255, 513, 14, 173, 14, 174, 29, 161, 29, 160, 12, 14, 14, 14, 223, 92, 223, 92, 237, 14, 237)
+polygon = PackedVector2Array(13, 351, 225, 351, 225, 302, 239, 302, 239, 349, 369, 349, 514, 349, 514, 335, 528, 335, 528, 367, 0, 367, 0, -1, 528, -1, 528.896, 240.879, 528, 258, 589, 258, 590, 272, 590, 351, 581, 350, 528, 351, 528, 335, 580, 338, 579, 270, 529, 269, 468, 269, 468, 255, 514, 255, 513, 14, 173, 14, 174, 29, 161, 29, 160, 12, 14, 14, 14, 223, 92, 223, 92, 237, 14, 237)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(68, 302, 157, 302, 157, 254, 147, 254, 147, 287, 67, 286)
@@ -140,6 +140,7 @@ polygon = PackedVector2Array(451, 49, 461, 49, 461, 91, 379, 92, 381, 139, 369, 
 [connection signal="body_entered" from="open_map/finish" to="." method="_on_finish_body_entered"]
 [connection signal="body_entered" from="open_map/finish" to="Lallu" method="_on_finish_body_entered"]
 [connection signal="body_entered" from="open_map/vortex" to="." method="_on_vortex_body_entered"]
+[connection signal="body_entered" from="open_map/vortex" to="Lallu" method="_on_vortex_body_entered"]
 [connection signal="body_exited" from="open_map/vortex" to="." method="_on_vortex_body_exited"]
 [connection signal="body_entered" from="bomb" to="." method="_on_bomb_body_entered"]
 [connection signal="body_entered" from="bomb" to="Lallu" method="_on_bomb_body_entered"]

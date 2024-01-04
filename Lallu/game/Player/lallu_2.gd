@@ -63,3 +63,6 @@ func _on_finish_body_entered(_body: Node2D) -> void:
 
 func _on_area_2d_body_exited(body):
 	ai_controller_2.reward += 0
+
+func _on_vortex_body_entered(body):
+	ai_controller_2.reward += 0.5

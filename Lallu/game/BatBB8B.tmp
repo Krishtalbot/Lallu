@@ -38,4 +38,3 @@ position = Vector2(1729, -424)
 [node name="Sync" type="Node" parent="."]
 script = ExtResource("2_uvcm5")
 speed_up = 16
-onnx_model_path = "model_lvl1.onnx"
