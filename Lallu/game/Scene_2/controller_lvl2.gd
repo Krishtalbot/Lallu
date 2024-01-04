@@ -4,6 +4,7 @@ var move = Vector2.ZERO
 
 @onready var lallu = $".."
 @onready var finish = $"../../open_map/finish"
+@onready var vortex = $"../../open_map/vortex"
 
 
 func get_obs() -> Dictionary:
@@ -12,6 +13,8 @@ func get_obs() -> Dictionary:
 		lallu.position.y,
 		finish.position.x,
 		finish.position.y,
+		vortex.position.x,
+		vortex.position.y,
 	] 
 	return {"obs":obs}
 

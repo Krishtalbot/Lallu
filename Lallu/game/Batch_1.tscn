@@ -6,34 +6,35 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1153, -205)
-zoom = Vector2(0.41, 0.41)
+position = Vector2(1119, -279)
+zoom = Vector2(0.785, 0.785)
 
 [node name="Level1" parent="." instance=ExtResource("1_78wvd")]
+position = Vector2(235, -235)
 
 [node name="Level2" parent="." instance=ExtResource("1_78wvd")]
-position = Vector2(0, -855)
+position = Vector2(235, -716)
 
 [node name="Level3" parent="." instance=ExtResource("1_78wvd")]
-position = Vector2(4, -428)
+position = Vector2(230, -476)
 
 [node name="Level4" parent="." instance=ExtResource("1_78wvd")]
-position = Vector2(866, 0)
+position = Vector2(1140, -235)
 
 [node name="Level5" parent="." instance=ExtResource("1_78wvd")]
-position = Vector2(866, -855)
+position = Vector2(688, -719)
 
 [node name="Level6" parent="." instance=ExtResource("1_78wvd")]
-position = Vector2(870, -428)
+position = Vector2(692, -470)
 
 [node name="Level7" parent="." instance=ExtResource("1_78wvd")]
-position = Vector2(1725, 4)
+position = Vector2(698, -231)
 
 [node name="Level8" parent="." instance=ExtResource("1_78wvd")]
-position = Vector2(1725, -851)
+position = Vector2(1137, -718)
 
 [node name="Level9" parent="." instance=ExtResource("1_78wvd")]
-position = Vector2(1729, -424)
+position = Vector2(1138, -472)
 
 [node name="Sync" type="Node" parent="."]
 script = ExtResource("2_uvcm5")
